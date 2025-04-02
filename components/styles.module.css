@@ -218,3 +218,13 @@
 .hidden {
   visibility: hidden;
 }
+
+.navLink {
+  display: flex;
+  align-items: center;
+}
+
+.navLink:hover {
+  opacity: 0.7;
+  transition: opacity 200ms ease-out;
+}
