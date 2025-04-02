@@ -1,12 +1,14 @@
 import type * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { IoHomeOutline } from '@react-icons/all-files/io5/IoHomeOutline'
 import cs from 'classnames'
 import * as React from 'react'
-import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
+import { Search, useNotionContext } from 'react-notion-x'
 
-import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
+import { isSearchEnabled, navigationLinks } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
+import Link from 'next/link'
 
 import styles from './styles.module.css'
 
@@ -39,14 +41,19 @@ export function NotionPageHeader({
 }) {
   const { components, mapPageUrl } = useNotionContext()
 
-  if (navigationStyle === 'default') {
-    return <Header block={block} />
-  }
+  // if (navigationStyle === 'default') {
+  //   return <Header block={block} />
+  // }
 
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+        <Link 
+          href="/"
+          className={cs(styles.navLink, 'breadcrumb', 'button')}
+          aria-label="go to homepage">
+          <IoHomeOutline />
+        </Link>
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks

@@ -108,7 +108,7 @@ REDIS_PASSWORD='TODO'
 
 If you're not sure which Redis provider to use, we recommend [Redis Labs](https://redis.com), which provides a free plan.
 
-Note that preview images and redis caching are both optional features. If you’d rather not deal with them, just disable them in your site config.
+Note that preview images and redis caching are both optional features. If you'd rather not deal with them, just disable them in your site config.
 
 ## Styles
 
@@ -131,6 +131,10 @@ Every notion block gets its own unique classname, so you can target individual b
 </p>
 
 Dark mode is fully supported and can be toggled via the sun / moon icon in the footer.
+
+## Navigation
+
+The site includes a simple navigation system with a home button for easy return to the main page. Navigation links can be configured in the site config.
 
 ## Automatic Social Images
 
